@@ -13,7 +13,6 @@ body {
 	font-family: 'GmarketSansMedium';
 }
 
-
 .list-box-inner a {
 	text-decoration: none;
 	color: black;
@@ -148,8 +147,6 @@ main td {
 	font-size: 15px;
 	color: ligth-gray;
 }
-
-
 
 footer {
 	border-top: 2px solid #eee;

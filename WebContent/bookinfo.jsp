@@ -11,7 +11,8 @@
 <main class="section">
 	<div class="bookinfo-box">
 		<div class="bookimg-box">
-			<img alt="사진" src="images/<%=dto.getBook_image()%>" width="100%" height="100%">
+			<img alt="사진" src="images/<%=dto.getBook_image()%>" width="100%"
+				height="100%">
 		</div>
 		<div class="bookpay-box">
 			<div id="booktitle">
@@ -37,8 +38,8 @@
 				<p><%=dto.getBook_content()%></p>
 			</div>
 			<div>
-				<form action="mainpage.jsp?center=cartlist.jsp" method="post">
-					<input type="hidden" name="book_id" value="<%=bookId %>" >
+				<form action="cartupdate.jsp" method="post">
+					<input type="hidden" name="book_id" value="<%=dto.getBook_id()%>">
 					<div style="display: flex; border-bottom: none;">
 						수량:<select class="form-select form-select-sm"
 							aria-label="Small select example" name="count"
@@ -51,8 +52,10 @@
 						</select>
 					</div>
 					<input type="submit" class="btn btn-outline-secondary" value="장바구니" />
-					<button type="button" class="btn btn-outline-secondary" onclick="location.href='mainpage.jsp?center=allbooklist.jsp?option=1'">목록으로</button>
-					<button type="button" class="btn btn-outline-secondary" onclick="location.href='mainpage.jsp'">메인으로</button>
+					<button type="button" class="btn btn-outline-secondary"
+						onclick="location.href='mainpage.jsp?center=allbooklist.jsp?option=1'">목록으로</button>
+					<button type="button" class="btn btn-outline-secondary"
+						onclick="location.href='mainpage.jsp'">메인으로</button>
 				</form>
 			</div>
 		</div>
