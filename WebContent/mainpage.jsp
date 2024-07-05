@@ -22,9 +22,10 @@
 			center = "center.jsp";
 		}
 	%>
+
 	<table width="1200px" />
 	<tr>
-		<td width="200px" height="97px"><a href="mainpage.jsp"><img alt="로고"
+		<td width="200px"><a href="mainpage.jsp"><img alt="로고"
 				src="https://bookshop.ge/images/logo.svg"></a></td>
 		<td align="right" style="padding:"><jsp:include page="header.jsp" />
 		</td>
@@ -43,5 +44,6 @@
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
 	</table>
+
 </body>
 </html>

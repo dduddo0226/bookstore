@@ -26,7 +26,7 @@
 						int discountPrice = (newBook.getBook_price() / 100) * (100 - newBook.getDiscount_rate());
 			%>
 
-			<a href="#">
+			<a href="mainpage.jsp?center=bookinfo.jsp?book_id=<%=newBook.getBook_id()%>">
 				<table width="400px">
 					<tr>
 						<td rowspan="5" width="150px" height="200px"><img alt="사진"

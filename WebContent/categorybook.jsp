@@ -66,7 +66,7 @@
 				for (BookDTO dto : booklist) {
 					int discountPrice = (dto.getBook_price() / 100) * (100 - dto.getDiscount_rate());
 			%>
-			<a href="">
+			<a href="mainpage.jsp?center=bookinfo.jsp?book_id=<%=dto.getBook_id()%>">
 				<table width="400px">
 					<tr>
 						<td rowspan="5" width="150px" height="200px"><img alt="사진"

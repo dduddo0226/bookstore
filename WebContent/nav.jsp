@@ -16,7 +16,7 @@
 				<form action="mainpage.jsp?center=searchbook.jsp" class="d-flex" role="search" method="post">
 					<input name="search" class="form-control me-2" type="search" placeholder="Search"
 						aria-label="Search">
-					<button class="btn btn-light" type="submit">Search</button>
+					<button class="btn btn-outline-primary" type="submit">Search</button>
 				</form>
 			</div>
 		</div>
