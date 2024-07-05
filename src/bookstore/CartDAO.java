@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class CartDAO {
 	private CartDAO() {
@@ -40,10 +41,37 @@ public class CartDAO {
 				  }
 			 sql = "INSERT INTO cart (cart_id, buyer, book_id, book_title, buy_price, buy_count, book_image) VALUES (?,?,?,?,?,?,?)";
 			 pt = conn.prepareStatement(sql);
-		//pt에 값 세팅하기
+			 pt.setInt(1, seq);
+			 pt.setString(2, cartBook.getBuyer());
+			 pt.setInt(3, cartBook.getBook_id());
+			 pt.setString(4, cartBook.getBook_title());
+			 pt.setInt(5, cartBook.getBuy_price());
+			 pt.setInt(6, cartBook.getBuy_count());
+			 pt.setString(7, cartBook.getBook_image());
+			 
+			 pt.executeUpdate();
+			 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
+	public ArrayList<CartDTO> selectAllCart() {
+		ArrayList<CartDTO>cartList = new ArrayList<CartDTO>();
+		try {
+			conn=getConnection();
+			 String sql = "select * from cart";
+			 pt = conn.prepareStatement(sql);
+			 rs = pt.executeQuery();
+			 if(rs.next()) {
+				 do {
+					CartDTO cart = new CartDTO(rs.getInt(1), rs.getString(2),
+							rs.getInt(3), rs.getString(4), rs.getInt(5), rs.getInt(6), rs.getString(7));
+					 cartList.add(cart);
+				 }while(rs.next()); 
+			 }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return cartList;
+	}
 }
