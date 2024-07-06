@@ -150,4 +150,6 @@ main td {
 
 footer {
 	border-top: 2px solid #eee;
+	padding: 20px 0 0 0;
+	font-size: 20px;
 }
