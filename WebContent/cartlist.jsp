@@ -22,15 +22,15 @@
 				ArrayList<CartDTO> cartlist = CartDAO.getInstance().selectAllCart();
 				int idx = 1;
 				for (CartDTO cart : cartlist) {
-				BookDTO book =BookDAO.getInstance().detailBook(cart.getBook_id());
+					BookDTO book = BookDAO.getInstance().detailBook(cart.getBook_id());
 			%>
 			<tr>
-				<td><p style="font-size: 15px"><%=idx++ %></p></td>
-				<td align="center"><img alt="사진" src="images/<%=cart.getBook_image() %>"
-					width="80px" height="127px"></td>
+				<td><p style="font-size: 15px"><%=idx++%></p></td>
+				<td align="center"><img alt="사진"
+					src="images/<%=cart.getBook_image()%>" width="80px" height="127px"></td>
 				<td><p style="font-size: 15px"><%=book.getBook_content()%></p></td>
 				<td>
-					<form action="#" method="post"> 
+					<form action="#" method="post">
 						<input type="hidden" name="book_id" value="">
 						<div style="display: flex; border-bottom: none;">
 							수량:<select class="form-select form-select-sm"
@@ -45,8 +45,10 @@
 						</div>
 				</td>
 				<td><%=cart.getBuy_price()%>원</td>
-				<td><form action="" method="post">
-						<input type="submit" class="btn btn-outline-secondary" value="삭제" />
+				<td><input type="hidden" name="cart_id"
+					value="<%=cart.getCart_id()%>" />
+					<button type="button" class="btn btn-outline-secondary" 
+						onclick="location.href='deletecartlist.jsp?cart_id=<%=cart.getCart_id() %>'" >삭제</button>
 					</form></td>
 			</tr>
 			<%
