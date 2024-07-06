@@ -16,7 +16,7 @@
 	} else {
 		int bookID = Integer.parseInt(request.getParameter("book_id"));
 		int buyCount = Integer.parseInt(request.getParameter("count"));
-
+ 	
 		BookDTO dto = BookDAO.getInstance().detailBook(bookID);
 
 		CartDTO cartDto = new CartDTO();

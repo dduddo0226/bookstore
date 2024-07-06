@@ -47,6 +47,10 @@ table h2 {
 	gap: 10px;
 }
 
+#go-cart{
+	background-color: white;
+	border: none;
+}
 .container-fluid {
 	display: flex;
 	justify-content: space-between;

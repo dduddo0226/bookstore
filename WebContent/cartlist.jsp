@@ -23,7 +23,6 @@
 				int idx = 1;
 				for (CartDTO cart : cartlist) {
 				BookDTO book =BookDAO.getInstance().detailBook(cart.getBook_id());
-					
 			%>
 			<tr>
 				<td><p style="font-size: 15px"><%=idx++ %></p></td>
@@ -31,7 +30,7 @@
 					width="80px" height="127px"></td>
 				<td><p style="font-size: 15px"><%=book.getBook_content()%></p></td>
 				<td>
-					<form action="#" method="post">
+					<form action="#" method="post"> 
 						<input type="hidden" name="book_id" value="">
 						<div style="display: flex; border-bottom: none;">
 							수량:<select class="form-select form-select-sm"
