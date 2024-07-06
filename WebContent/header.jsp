@@ -28,7 +28,7 @@
 			} else {
 		%>
 		<div>
-			<span><%=id%>님</span>
+			<span><%=id%>님</span> 
 			<button class="btn btn-light logincheck"
 				onclick="location.href='logout.jsp'">로그아웃</button>
 			<button id="go-cart" onclick="location.href='mainpage.jsp?center=cartlist.jsp'">
