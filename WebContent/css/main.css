@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'GmarketSansMedium';
 	src:
- url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
- format('woff');
+		url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+		format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -47,10 +47,11 @@ table h2 {
 	gap: 10px;
 }
 
-#go-cart{
+#go-cart {
 	background-color: white;
 	border: none;
 }
+
 .container-fluid {
 	display: flex;
 	justify-content: space-between;
@@ -78,11 +79,13 @@ main td {
 .list-box-inner {
 	display: flex;
 }
-.logincheck{
+
+.logincheck {
 	height: 35px;
 	position: relative;
-	top:-2px;
+	top: -2px;
 }
+
 .list {
 	display: flex;
 }
@@ -92,22 +95,26 @@ main td {
 	justify-content: end;
 	padding-bottom: 0 0 50px 0;
 }
-.select-box > ul{
+
+.select-box>ul {
 	display: flex;
 }
-.select-box li{
+
+.select-box li {
 	list-style: none;
 }
-.select-box li button:hover{
+
+.select-box li button:hover {
 	color: #2699FB;
-	
 }
+
 .select-box li button {
 	background-color: white;
 	border-radius: 5px;
 	border: none;
 	transition: 200ms;
 }
+
 .allbook-list {
 	margin-top: 30px;
 	width: 1200px;
@@ -120,34 +127,41 @@ main td {
 	padding: 0 20px 0 0;
 }
 
-.bookinfo-box{
+.bookinfo-box {
 	display: flex;
 	justify-content: center;
 }
-.bookimg-box{
+
+.bookimg-box {
 	width: 460px;
 	height: 670px;
 }
-#booktitle{
+
+#booktitle {
 	font-size: 30px;
 	font-weight: bold;
 }
-.bookpay-box{
+
+.bookpay-box {
 	margin-left: 50px;
 }
-.bookpay-box div{
+
+.bookpay-box div {
 	width: 500px;
 	padding: 20px 0 20px 0;
 	border-bottom: 1px solid #eee;
 }
-.bookpay-box span{
+
+.bookpay-box span {
 	font-size: 25px;
 	margin-right: 10px;
 }
-#discount{
+
+#discount {
 	color: #4DAC27;
 }
-#disprice{
+
+#disprice {
 	font-size: 15px;
 	color: ligth-gray;
 }

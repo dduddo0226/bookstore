@@ -56,7 +56,7 @@ public class CartDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public ArrayList<CartDTO> selectAllCart() {
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 		try {
@@ -78,14 +78,30 @@ public class CartDAO {
 	}
 
 	public void deleteCart(int cart_id) {
-		
+
 		try {
 			conn = getConnection();
 			String sql = "delete from cart where cart_id = ?";
 			pt = conn.prepareStatement(sql);
 			pt.setInt(1, cart_id);
 			pt.executeUpdate();
-			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void updateBuycount(int cart_id, int buy_count) {
+
+		try {
+			conn = getConnection();
+			String sql = "update cart set buy_count = ?  where cart_id = ?";
+			pt = conn.prepareStatement(sql);
+			pt.setInt(1, buy_count);
+			pt.setInt(2, cart_id);
+			pt.executeUpdate();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
