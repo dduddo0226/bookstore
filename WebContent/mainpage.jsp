@@ -32,7 +32,7 @@
 	<table width="1200px" />
 	<tr>
 		<td width="200px"><a href="mainpage.jsp"><img alt="로고"
-				src="https://bookshop.ge/images/logo.svg"></a></td>
+				src="images/logo.svg"></a></td>
 		<td align="right" style="padding:"><jsp:include page="header.jsp" />
 		</td>
 	</tr>
