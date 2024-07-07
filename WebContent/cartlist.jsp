@@ -23,6 +23,7 @@
 				int idx = 1;
 				for (CartDTO cart : cartlist) {
 					BookDTO book = BookDAO.getInstance().detailBook(cart.getBook_id());
+					int sum = cart.getBuy_count() * cart.getBuy_price();
 			%>
 			<tr>
 				<td><p style="font-size: 15px"><%=idx++%></p></td>
@@ -49,7 +50,7 @@
 						</button>
 					</div>
 				</td>
-				<td><%=cart.getBuy_price()%>원</td>
+				<td><%=sum%>원</td>
 				<td><input type="hidden" name="cart_id"
 					value="<%=cart.getCart_id()%>" />
 					<button type="button" class="btn btn-outline-secondary"
