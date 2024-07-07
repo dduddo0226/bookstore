@@ -28,7 +28,10 @@
 				<td><p style="font-size: 15px"><%=idx++%></p></td>
 				<td align="center"><img alt="사진"
 					src="images/<%=cart.getBook_image()%>" width="80px" height="127px"></td>
-				<td><p style="font-size: 15px"><%=book.getBook_content()%></p></td>
+				<td>
+					<h5><strong><%=book.getBook_title() %></strong></h5>
+					<p style="font-size: 15px"><%=book.getBook_content()%></p>
+				</td>
 				<td>
 					<form action="#" method="post">
 						<input type="hidden" name="book_id" value="">
@@ -47,8 +50,8 @@
 				<td><%=cart.getBuy_price()%>원</td>
 				<td><input type="hidden" name="cart_id"
 					value="<%=cart.getCart_id()%>" />
-					<button type="button" class="btn btn-outline-secondary" 
-						onclick="location.href='deletecartlist.jsp?cart_id=<%=cart.getCart_id() %>'" >삭제</button>
+					<button type="button" class="btn btn-outline-secondary"
+						onclick="location.href='deletecartlist.jsp?cart_id=<%=cart.getCart_id()%>'">삭제</button>
 					</form></td>
 			</tr>
 			<%
