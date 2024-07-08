@@ -23,7 +23,7 @@
 				int idx = 1;
 				for (CartDTO cart : cartlist) {
 					BookDTO book = BookDAO.getInstance().detailBook(cart.getBook_id());
-					int sum = cart.getBuy_count() * cart.getBuy_price();
+					int sum = cart.getBuy_count() * (cart.getBuy_price() / 100) * (100 - book.getDiscount_rate());
 			%>
 			<tr>
 				<td><p style="font-size: 15px"><%=idx++%></p></td>

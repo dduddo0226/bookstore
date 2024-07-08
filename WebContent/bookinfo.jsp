@@ -19,8 +19,8 @@
 				<%=dto.getBook_title()%>
 			</div>
 			<div>
-				<span id="discount"><%=dto.getDiscount_rate()%>%</span><span><%=dto.getBook_price()%>원</span><span
-					id="disprice"><del><%=discountPrice%>원
+				<span id="discount"><%=dto.getDiscount_rate()%>%</span><span><%=discountPrice%>원</span><span
+					id="disprice"><del><%=dto.getBook_price()%>원
 					</del></span>
 			</div>
 			<div>
