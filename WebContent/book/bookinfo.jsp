@@ -1,5 +1,5 @@
-<%@page import="bookstore.BookDTO"%>
-<%@page import="bookstore.BookDAO"%>
+<%@page import="bookstore.model.BookDAO"%>
+<%@page import="bookstore.model.BookDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -38,7 +38,7 @@
 				<p><%=dto.getBook_content()%></p>
 			</div>
 			<div>
-				<form action="cartupdate.jsp" method="post">
+				<form action="cart/cartupdate.jsp" method="post">
 					<input type="hidden" name="book_id" value="<%=dto.getBook_id()%>">
 					<div style="display: flex; border-bottom: none;">
 						수량:<select class="form-select form-select-sm"
@@ -53,7 +53,7 @@
 					</div>
 					<input type="submit" class="btn btn-outline-secondary" value="장바구니" />
 					<button type="button" class="btn btn-outline-secondary"
-						onclick="location.href='mainpage.jsp?center=allbooklist.jsp?option=1'">목록으로</button>
+						onclick="location.href='mainpage.jsp?center=book/allbooklist.jsp?option=1'">목록으로</button>
 					<button type="button" class="btn btn-outline-secondary"
 						onclick="location.href='mainpage.jsp'">메인으로</button>
 				</form>

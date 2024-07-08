@@ -12,7 +12,7 @@
 			if (id == null) {
 		%>
 		<div class="login-box">
-			<form action="loginpro.jsp" method="post">
+			<form action="login/loginpro.jsp" method="post">
 				<div>
 					ID: <input type="text" name="id" />
 				</div>
@@ -30,8 +30,8 @@
 		<div>
 			<span><%=id%>님</span> 
 			<button class="btn btn-light logincheck"
-				onclick="location.href='logout.jsp'">로그아웃</button>
-			<button id="go-cart" onclick="location.href='mainpage.jsp?center=cartlist.jsp'">
+				onclick="location.href='login/logout.jsp'">로그아웃</button>
+			<button id="go-cart" onclick="location.href='mainpage.jsp?center=cart/cartlist.jsp'">
 				<i class="fa-solid fa-cart-shopping"></i>
 			</button>
 

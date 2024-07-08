@@ -6,11 +6,11 @@
 		<div class="collapse navbar-collapse" id="navbarText">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="mainpage.jsp?center=allbooklist.jsp?option=1">전체목록보기</a></li>
-				<li class="nav-item"><a class="nav-link active" href="mainpage.jsp?center=categorybook.jsp?category=100&option=1">문학</a>
+					aria-current="page" href="mainpage.jsp?center=book/allbooklist.jsp?option=1">전체목록보기</a></li>
+				<li class="nav-item"><a class="nav-link active" href="mainpage.jsp?center=book/categorybook.jsp?category=100&option=1">문학</a>
 				</li>
-				<li class="nav-item"><a class="nav-link active" href="mainpage.jsp?center=categorybook.jsp?category=200&option=1">외국어</a></li>
-				<li class="nav-item"><a class="nav-link active" href="mainpage.jsp?center=categorybook.jsp?category=300&option=1">컴퓨터</a></li>
+				<li class="nav-item"><a class="nav-link active" href="mainpage.jsp?center=book/categorybook.jsp?category=200&option=1">외국어</a></li>
+				<li class="nav-item"><a class="nav-link active" href="mainpage.jsp?center=book/categorybook.jsp?category=300&option=1">컴퓨터</a></li>
 			</ul>
 			<div>
 				<form action="mainpage.jsp?center=searchbook.jsp" class="d-flex" role="search" method="post">

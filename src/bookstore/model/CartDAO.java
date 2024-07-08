@@ -1,4 +1,4 @@
-package bookstore;
+package bookstore.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

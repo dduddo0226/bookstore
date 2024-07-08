@@ -1,4 +1,4 @@
-package bookstore;
+package bookstore.model;
 
 public class CartDTO {
 	private int cart_id;

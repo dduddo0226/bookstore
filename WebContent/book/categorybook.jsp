@@ -1,6 +1,6 @@
-<%@page import="bookstore.BookDTO"%>
+<%@page import="bookstore.model.BookDAO"%>
+<%@page import="bookstore.model.BookDTO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="bookstore.BookDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
@@ -31,15 +31,15 @@
 		<div class="select-box">
 			<ul>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=categorybook.jsp?option=1&category=<%=category%>'">최신순</button></li>
+						onclick="location.href='mainpage.jsp?center=book/categorybook.jsp?option=1&category=<%=category%>'">최신순</button></li>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=categorybook.jsp?option=2&category=<%=category%>'">제목순</button></li>
+						onclick="location.href='mainpage.jsp?center=book/categorybook.jsp?option=2&category=<%=category%>'">제목순</button></li>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=categorybook.jsp?option=3&category=<%=category%>'">할인율높은순</button></li>
+						onclick="location.href='mainpage.jsp?center=book/categorybook.jsp?option=3&category=<%=category%>'">할인율높은순</button></li>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=categorybook.jsp?option=4&category=<%=category%>'">높은가격순</button></li>
+						onclick="location.href='mainpage.jsp?center=book/categorybook.jsp?option=4&category=<%=category%>'">높은가격순</button></li>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=categorybook.jsp?option=5&category=<%=category%>'">낮은가격순</button></li>
+						onclick="location.href='mainpage.jsp?center=book/categorybook.jsp?option=5&category=<%=category%>'">낮은가격순</button></li>
 			</ul>
 		</div>
 		<div class="allbook-list">
@@ -66,7 +66,8 @@
 				for (BookDTO dto : booklist) {
 					int discountPrice = (dto.getBook_price() / 100) * (100 - dto.getDiscount_rate());
 			%>
-			<a href="mainpage.jsp?center=bookinfo.jsp?book_id=<%=dto.getBook_id()%>">
+			<a
+				href="mainpage.jsp?center=book/bookinfo.jsp?book_id=<%=dto.getBook_id()%>">
 				<table width="400px">
 					<tr>
 						<td rowspan="5" width="150px" height="200px"><img alt="사진"

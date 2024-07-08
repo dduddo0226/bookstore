@@ -1,4 +1,4 @@
-<%@page import="bookstore.CartDAO"%>
+<%@page import="bookstore.model.CartDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
@@ -15,11 +15,11 @@
 <%
 	} else {
 			CartDAO.getInstance().updateBuycount(cart_id, buy_count - 1);
-			response.sendRedirect("mainpage.jsp?center=cartlist.jsp");
+			response.sendRedirect("../mainpage.jsp?center=cart/cartlist.jsp");
 		}
 
 	} else if (op.equals("1")) {
 		CartDAO.getInstance().updateBuycount(cart_id, buy_count + 1);
-		response.sendRedirect("mainpage.jsp?center=cartlist.jsp");
+		response.sendRedirect("../mainpage.jsp?center=cart/cartlist.jsp");
 	}
 %>

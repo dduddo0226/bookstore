@@ -1,5 +1,6 @@
-<%@page import="bookstore.BookDAO"%>
-<%@page import="bookstore.BookDTO"%>
+<%@page import="bookstore.model.BookDAO"%>
+<%@page import="bookstore.model.BookDTO"%>
+
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -26,7 +27,7 @@
 						int discountPrice = (newBook.getBook_price() / 100) * (100 - newBook.getDiscount_rate());
 			%>
 
-			<a href="mainpage.jsp?center=bookinfo.jsp?book_id=<%=newBook.getBook_id()%>">
+			<a href="mainpage.jsp?center=book/bookinfo.jsp?book_id=<%=newBook.getBook_id()%>">
 				<table width="400px">
 					<tr>
 						<td rowspan="5" width="150px" height="200px"><img alt="사진"
@@ -54,7 +55,7 @@
 			%>
 		</div>
 		<div class="addButton">
-			<button type="button" class="btn btn-light" onclick="location.href='mainpage.jsp?center=categorybook.jsp?option=1&category=<%=kindList[i]%>'">더보기</button>
+			<button type="button" class="btn btn-light" onclick="location.href='mainpage.jsp?center=book/categorybook.jsp?option=1&category=<%=kindList[i]%>'">더보기</button>
 		</div>
 	</div>
 

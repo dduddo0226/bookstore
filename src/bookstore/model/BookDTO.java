@@ -1,4 +1,4 @@
-package bookstore;
+package bookstore.model;
 
 // 책의 정보를 한 건 저장하는 클래스
 

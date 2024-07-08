@@ -1,8 +1,8 @@
-<%@page import="bookstore.BookDAO"%>
-<%@page import="bookstore.BookDTO"%>
-<%@page import="bookstore.CartDTO"%>
+<%@page import="bookstore.model.BookDAO"%>
+<%@page import="bookstore.model.BookDTO"%>
+<%@page import="bookstore.model.CartDTO"%>
+<%@page import="bookstore.model.CartDAO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="bookstore.CartDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -38,13 +38,13 @@
 				<td>
 					<div id="amount-control">
 						<button type="button"
-							onclick="location.href='updatecount.jsp?cart_id=<%=cart.getCart_id()%>&buy_count=<%=cart.getBuy_count()%>&op=0'"
+							onclick="location.href='cart/updatecount.jsp?cart_id=<%=cart.getCart_id()%>&buy_count=<%=cart.getBuy_count()%>&op=0'"
 							style="background-color: white; border: none;">
 							<i class="fa-solid fa-minus fa-xs"></i>
 						</button>
 						<%=cart.getBuy_count()%>
 						<button type="button"
-							onclick="location.href='updatecount.jsp?cart_id=<%=cart.getCart_id()%>&buy_count=<%=cart.getBuy_count()%>&op=1'"
+							onclick="location.href='cart/updatecount.jsp?cart_id=<%=cart.getCart_id()%>&buy_count=<%=cart.getBuy_count()%>&op=1'"
 							style="background-color: white; border: none;">
 							<i class="fa-solid fa-plus fa-xs"></i>
 						</button>
@@ -54,7 +54,7 @@
 				<td><input type="hidden" name="cart_id"
 					value="<%=cart.getCart_id()%>" />
 					<button type="button" class="btn btn-outline-secondary"
-						onclick="location.href='deletecartlist.jsp?cart_id=<%=cart.getCart_id()%>'">삭제</button>
+						onclick="location.href='cart/deletecartlist.jsp?cart_id=<%=cart.getCart_id()%>'">삭제</button>
 					</form></td>
 			</tr>
 			<%
