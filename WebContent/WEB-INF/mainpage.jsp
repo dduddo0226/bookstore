@@ -21,17 +21,9 @@
 </head>
 <body>
 
-	<%
-		String center = request.getParameter("center");
-
-		if (center == null) {
-			center = "center.jsp";
-		}
-	%>
-
 	<table width="1200px" />
 	<tr>
-		<td width="200px"><a href="mainpage.jsp"><img alt="로고"
+		<td width="200px"><a href="home.sha"><img alt="로고"
 				src="images/logo.svg"></a></td>
 		<td align="right" style="padding:"><jsp:include page="header.jsp" />
 		</td>
@@ -40,7 +32,7 @@
 		<td colspan="2"><jsp:include page="nav.jsp" /></td>
 	</tr>
 	<tr>
-		<td colspan="2"><jsp:include page="<%=center%>" /></td>
+		<td colspan="2"><jsp:include page="${center}" /></td>
 	</tr>
 	<tr>
 		<td colspan="2"><jsp:include page="footer.jsp" /></td>

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import service.BookService;
+
 @WebServlet("*.sha")
 public class HomeController extends HttpServlet {
 
@@ -25,6 +27,8 @@ public class HomeController extends HttpServlet {
 	protected void reqPro(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		BookService service = BookService.getInstance();
+
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 
@@ -34,15 +38,27 @@ public class HomeController extends HttpServlet {
 
 		String context = url.substring(contextPath.length());
 
-		String viewpage = "/WEB-INF/";
+		String viewpage = "/WEB-INF/mainpage";
 
+		
 		switch (context) {
+
 		case "/home.sha":
-			viewpage += "mainpage";
+
+			service.selectAllNewBook(request, response);
+			request.setAttribute("center", "/WEB-INF/book/latestlist.jsp");
+			break;
+
+		case "/bookinfo.sha":
+
+			service.detailBook(request,response);
+			
+			request.setAttribute("center", "/WEB-INF/book/bookinfo.jsp");
 			break;
 
 		default:
 			break;
+
 		}
 
 		viewpage += ".jsp";

@@ -3,43 +3,38 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%
-	int bookId = Integer.parseInt(request.getParameter("book_id"));
-	BookDTO dto = BookDAO.getInstance().detailBook(bookId);
-	int discountPrice = (dto.getBook_price() / 100) * (100 - dto.getDiscount_rate());
-%>
 <main class="section">
 	<div class="bookinfo-box">
 		<div class="bookimg-box">
-			<img alt="사진" src="images/<%=dto.getBook_image()%>" width="100%"
+			<img alt="사진" src="images/${book.book_image}" width="100%"
 				height="100%">
 		</div>
 		<div class="bookpay-box">
 			<div id="booktitle">
-				<%=dto.getBook_title()%>
+				${book.book_title}
 			</div>
 			<div>
-				<span id="discount"><%=dto.getDiscount_rate()%>%</span><span><%=discountPrice%>원</span><span
-					id="disprice"><del><%=dto.getBook_price()%>원
+				<span id="discount">${book.discount_rate}%</span><span>${String.format("%.0f",(book.book_price / 100) * (100 - book.discount_rate))}원</span><span
+					id="disprice"><del>${book.book_price}원
 					</del></span>
 			</div>
 			<div>
-				<p><%=dto.getAuthor()%>
+				<p>${book.author}
 					저자(글)
 				</p>
-				<p><%=dto.getPublishing_com()%>
+				<p>${book.publishing_com}
 					|
-					<%=dto.getPublishing_date()%></p>
+					${book.publishing_date}</p>
 			</div>
 			<div>
 				<p style="font-size: 18px">
 					<strong>상세설명</strong>
 				</p>
-				<p><%=dto.getBook_content()%></p>
+				<p>${book.book_content}</p>
 			</div>
 			<div>
 				<form action="cart/cartupdate.jsp" method="post">
-					<input type="hidden" name="book_id" value="<%=dto.getBook_id()%>">
+					<input type="hidden" name="book_id" value="${book.book_id}">
 					<div style="display: flex; border-bottom: none;">
 						수량:<select class="form-select form-select-sm"
 							aria-label="Small select example" name="count"
@@ -53,9 +48,9 @@
 					</div>
 					<input type="submit" class="btn btn-outline-secondary" value="장바구니" />
 					<button type="button" class="btn btn-outline-secondary"
-						onclick="location.href='mainpage.jsp?center=book/allbooklist.jsp?option=1'">목록으로</button>
+						onclick="location.href='#'">목록으로</button>
 					<button type="button" class="btn btn-outline-secondary"
-						onclick="location.href='mainpage.jsp'">메인으로</button>
+						onclick="location.href='home.sha'">메인으로</button>
 				</form>
 			</div>
 		</div>
