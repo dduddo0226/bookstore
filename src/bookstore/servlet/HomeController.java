@@ -23,7 +23,7 @@ public class HomeController extends HttpServlet {
 		
 	}
 	protected void reqPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String viewPage = "/mainpage.jsp";
+		String viewPage = "/WEB-INF/mainpage.jsp";
 		
 		RequestDispatcher dis = request.getRequestDispatcher(viewPage);
 		dis.forward(request, response);
