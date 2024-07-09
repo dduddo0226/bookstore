@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("*.sha")
-public class HomeController extends HttpServlet {
+@WebServlet("/")
+public class MainStartController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -25,28 +25,7 @@ public class HomeController extends HttpServlet {
 	protected void reqPro(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		request.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-
-		String url = request.getRequestURI();
-
-		String contextPath = request.getContextPath();
-
-		String context = url.substring(contextPath.length());
-
-		String viewpage = "/WEB-INF/";
-
-		switch (context) {
-		case "/home.sha":
-			viewpage += "mainpage";
-			break;
-
-		default:
-			break;
-		}
-
-		viewpage += ".jsp";
-		RequestDispatcher dis = request.getRequestDispatcher(viewpage);
+		RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/index.jsp");
 		dis.forward(request, response);
 
 	}

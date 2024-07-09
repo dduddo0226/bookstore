@@ -9,7 +9,7 @@
 </head>
 <body>
 	<%
-		response.sendRedirect("bookstore.sha");
+		response.sendRedirect("home.sha");
 	%>
 </body>
 </html>
