@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import bookstore.model.BookDAO;
 import bookstore.model.BookDTO;
 
-@WebServlet("/book")
+@WebServlet("*.sha")
 public class bookController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -27,10 +27,15 @@ public class bookController extends HttpServlet {
 		reqPro(request, response);
 
 	}
-
+	
 	protected void reqPro(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		request.setCharacterEncoding("UTF-8");
+		String[] kindList = { "100", "200", "300" };
+		String[] kindName = { "문학", "외국어", "컴퓨터" };
+		
+		
+		
 		int option = Integer.parseInt(request.getParameter("option"));
 
 		ArrayList<BookDTO> booklist = BookDAO.getInstance().selectAllNewBook();
@@ -57,7 +62,7 @@ public class bookController extends HttpServlet {
 
 		request.setAttribute("booklist", booklist);
 		
-		RequestDispatcher dis = request.getRequestDispatcher("/mainpage.jsp?center=book/allbooklist.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/mainpage.jsp?center=book/allbooklist.jsp");
 		dis.forward(request, response);
 	}
 
