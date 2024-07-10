@@ -9,9 +9,8 @@
 		<div class="logo-box col-3">
 			<a href="home.sha"><img alt="로고" src="images/logo.svg"></a>
 		</div>
-		<div class="col-5">
-		</div>
-		<div class="col-4">
+		
+		<div class="col-9" style="text-align: right;">
 			<p style="color: red;">* 반드시 로그인을 하셔야 쇼핑을 하실 수 있습니다.</p>
 		</div>
 	</div>
