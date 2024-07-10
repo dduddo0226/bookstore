@@ -6,7 +6,7 @@
 		<div class="collapse navbar-collapse" id="navbarText">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="book?option=1">전체목록보기</a></li>
+					aria-current="page" href="book.sha?option=1">전체목록보기</a></li>
 				<li class="nav-item"><a class="nav-link active"
 					href="mainpage.jsp?center=book/categorybook.jsp?category=100&option=1">문학</a>
 				</li>

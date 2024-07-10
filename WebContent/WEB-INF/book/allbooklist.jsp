@@ -10,15 +10,15 @@
 		<div class="select-box">
 			<ul>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=book/allbooklist.jsp?option=1'">최신순</button></li>
+						onclick="location.href='?option=1'">최신순</button></li>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=book/allbooklist.jsp?option=2'">제목순</button></li>
+						onclick="location.href='?option=2'">제목순</button></li>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=book/allbooklist.jsp?option=3'">할인율높은순</button></li>
+						onclick="location.href='?option=3'">할인율높은순</button></li>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=book/allbooklist.jsp?option=4'">높은가격순</button></li>
+						onclick="location.href='?option=4'">높은가격순</button></li>
 				<li><button
-						onclick="location.href='mainpage.jsp?center=book/allbooklist.jsp?option=5'">낮은가격순</button></li>
+						onclick="location.href='?option=5'">낮은가격순</button></li>
 			</ul>
 		</div>
 		<div class="allbook-list">
@@ -42,7 +42,7 @@
 						<tr>
 							<td width="200px"><del> 정가: ${book.book_price}원 </del><br />
 								<p style="color: #2699FB; display: inline-block;">판매가:
-									${(book.book_price / 100) * (100 - (book.discount_rate))}원</p></td>
+									${String.format("%.0f",(book.book_price / 100) * (100 - book.discount_rate))}원</p></td>
 						</tr>
 					</table>
 				</a>

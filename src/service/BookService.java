@@ -26,11 +26,11 @@ public class BookService {
 
 	public void selectKindNewBook(HttpServletRequest request, HttpServletResponse response) {
 		String[] categoryNum = { "100", "200", "300" };
-		
+
 		String[] categories = { "문학", "외국어", "컴퓨터" };
 		Map<String, ArrayList<BookDTO>> kindNewBook = new HashMap<String, ArrayList<BookDTO>>();
-		
-		for(int i=0;i<categoryNum.length;i++) {
+
+		for (int i = 0; i < categoryNum.length; i++) {
 			kindNewBook.put(categories[i], dao.selectKindNewBook(categoryNum[i]));
 		}
 		request.setAttribute("kindNewBook", kindNewBook);
@@ -39,9 +39,16 @@ public class BookService {
 	public void detailBook(HttpServletRequest request, HttpServletResponse response) {
 
 		int book_id = Integer.parseInt(request.getParameter("book_id"));
-		
+
 		BookDTO book = dao.detailBook(book_id);
 		request.setAttribute("book", book);
+
+	}
+
+	public void selectAllNewBook(HttpServletRequest request, HttpServletResponse response) {
+
+		ArrayList<BookDTO> booklist = dao.selectAllNewBook();
+		request.setAttribute("booklist", booklist);
 
 	}
 

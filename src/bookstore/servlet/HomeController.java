@@ -48,6 +48,12 @@ public class HomeController extends HttpServlet {
 			service.selectKindNewBook(request, response);
 			request.setAttribute("center", "/WEB-INF/book/latestlist.jsp");
 			break;
+			
+		case "/book.sha":
+			
+			service.selectAllNewBook(request, response);
+			request.setAttribute("center", "/WEB-INF/book/allbooklist.jsp");
+			break;
 
 		case "/bookinfo.sha":
 
