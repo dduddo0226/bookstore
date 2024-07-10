@@ -20,28 +20,20 @@
 
 </head>
 <body>
-
-	<table width="1200px" />
-	<tr>
-		<td width="200px"><a href="home.sha"><img alt="로고"
-				src="images/logo.svg"></a></td>
-		<td align="right" style="padding:"><jsp:include page="header.jsp" />
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2"><jsp:include page="nav.jsp" /></td>
-	</tr>
-	<tr>
-		<td colspan="2"><jsp:include page="${center}" /></td>
-	</tr>
-	<tr>
-		<td colspan="2"><jsp:include page="footer.jsp" /></td>
-	</tr>
+	<header>
+		<jsp:include page="header.jsp"></jsp:include>
+	</header>
+	<nav><jsp:include page="nav.jsp"></jsp:include></nav>
+	<main class="container">
+		<div class="row"> <jsp:include page="${center}"></jsp:include> </div>
+	</main>
+	<footer>
+		<jsp:include page="footer.jsp"></jsp:include>
+	</footer>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
 	</table>
-
 </body>
 </html>

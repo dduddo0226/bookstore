@@ -3,12 +3,19 @@
 <%
 	String id = (String) session.getAttribute("id");
 %>
-<header>
-	<div class="header">
-		
+
+<div class="header container">
+	<div class="row">
+		<div class="logo-box col-3">
+			<a href="home.sha"><img alt="로고" src="images/logo.svg"></a>
+		</div>
+		<div class="col-5">
+		</div>
+		<div class="col-4">
+			<p style="color: red;">* 반드시 로그인을 하셔야 쇼핑을 하실 수 있습니다.</p>
+		</div>
 	</div>
-	<p style="color: red;">* 반드시 로그인을 하셔야 쇼핑을 하실 수 있습니다.</p>
-</header>
+</div>
 
 <!--
 		<div>
