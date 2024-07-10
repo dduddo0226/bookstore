@@ -16,7 +16,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <script defer src="script/main.js"></script>
-<link href="css/main.css" rel="stylesheet">
+<link href="css/main.css?힣" rel="stylesheet">
 
 </head>
 <body>

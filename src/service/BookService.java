@@ -1,6 +1,9 @@
 package service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,25 +24,16 @@ public class BookService {
 
 	private BookDAO dao = BookDAO.getInstance();
 
-	public void selectAllNewBook(HttpServletRequest request, HttpServletResponse response) {
-
+	public void selectKindNewBook(HttpServletRequest request, HttpServletResponse response) {
 		String[] categoryNum = { "100", "200", "300" };
-
+		
 		String[] categories = { "문학", "외국어", "컴퓨터" };
-		request.setAttribute("categories", categories);
-
-		ArrayList<BookDTO> bookList = new ArrayList<>();
-
-		for (String s : categoryNum) {
-			ArrayList<BookDTO> temp = dao.selectKindNewBook(s);
-
-			for (BookDTO dto : temp) {
-				bookList.add(dto);
-			}
+		Map<String, ArrayList<BookDTO>> kindNewBook = new HashMap<String, ArrayList<BookDTO>>();
+		
+		for(int i=0;i<categoryNum.length;i++) {
+			kindNewBook.put(categories[i], dao.selectKindNewBook(categoryNum[i]));
 		}
-
-		request.setAttribute("booklist", bookList);
-
+		request.setAttribute("kindNewBook", kindNewBook);
 	}
 
 	public void detailBook(HttpServletRequest request, HttpServletResponse response) {
