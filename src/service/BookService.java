@@ -47,7 +47,29 @@ public class BookService {
 
 	public void selectAllNewBook(HttpServletRequest request, HttpServletResponse response) {
 
-		ArrayList<BookDTO> booklist = dao.selectAllNewBook();
+		String sort = request.getParameter("sort");
+
+		ArrayList<BookDTO> booklist = new ArrayList<BookDTO>();
+
+		switch (sort) {
+		case "1":
+			booklist = dao.selectAllNewBook();
+			break;
+		case "2":
+			booklist = dao.selectAllNameBook();
+			break;
+		case "3":
+			booklist = dao.selectAllDiscountBook();
+			break;
+		case "4":
+			booklist = dao.selectAllUpPriceBook();
+			break;
+		case "5":
+			booklist = dao.selectAllDownPriceBook();
+			break;
+		default:
+			break;
+		}
 		request.setAttribute("booklist", booklist);
 
 	}

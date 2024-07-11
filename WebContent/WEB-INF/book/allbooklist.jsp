@@ -10,15 +10,15 @@
 		<div class="select-box">
 			<ul>
 				<li><button
-						onclick="location.href='?option=1'">최신순</button></li>
+						onclick="location.href='book.sha?sort=1'">최신순</button></li>
 				<li><button
-						onclick="location.href='?option=2'">제목순</button></li>
+						onclick="location.href='book.sha?sort=2'">제목순</button></li>
 				<li><button
-						onclick="location.href='?option=3'">할인율높은순</button></li>
+						onclick="location.href='book.sha?sort=3'">할인율높은순</button></li>
 				<li><button
-						onclick="location.href='?option=4'">높은가격순</button></li>
+						onclick="location.href='book.sha?sort=4'">높은가격순</button></li>
 				<li><button
-						onclick="location.href='?option=5'">낮은가격순</button></li>
+						onclick="location.href='book.sha?sort=5'">낮은가격순</button></li>
 			</ul>
 		</div>
 		<div class="allbook-list">
